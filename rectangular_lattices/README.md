@@ -8,5 +8,9 @@
   
   **runlattice.sh**: script that runs a 2D mpb calculation for fixed oblique lattice vectors, given by $(1, 0)$ and $(0.5, 0.8)$ 
 
+  **Inverse_Design_From_Symbols_Random.py**: 
+
+  **Two_Tone_Inverse_Design_From_Symbols_Random.py**: 
+
 ## Symbolic formulas 
   
