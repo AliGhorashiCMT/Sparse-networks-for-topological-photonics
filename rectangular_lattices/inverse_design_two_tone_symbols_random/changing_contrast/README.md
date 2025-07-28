@@ -25,3 +25,5 @@
    
    *contrastidx*: The index corresponding to the value of the dielectric contrast. Takes values from **1** to **6**. 
 
+  **fourier-lattice.ctl, level-set-fourier-lattice.scm**: scripts that directly run MPB on the two-tone lattices. The actual dielectric function, in real space, is created by the function **(define (level-set-eps r)**. This function evaluates a Fourier sum and, depending on whether this sum takes a value above/below *medianeps* assigns a value to the dielectric function of *epsout*/*epsin*, respectively. 
+
