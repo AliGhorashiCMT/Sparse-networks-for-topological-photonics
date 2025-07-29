@@ -10,7 +10,9 @@
 
   **Inverse_Design_From_Symbols_Random.py**: 
 
-  **Two_Tone_Inverse_Design_From_Symbols_Random.py**: 
+  **Two_Tone_Inverse_Design_From_Symbols_Random.py**:
+
+  **run_inverse_design_from_symbols.sh**: Bash script that runs inverse design through gradient descent of the formulas we obtain from symbolic regression (by calling relevant python file(s)). 
 
 ## Symbolic formulas 
   
