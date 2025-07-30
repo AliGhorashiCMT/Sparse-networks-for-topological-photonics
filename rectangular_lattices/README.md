@@ -8,7 +8,7 @@
   
   **runlattice.sh**: script that runs a 2D mpb calculation for fixed oblique lattice vectors, given by $(1, 0)$ and $(0.5, 0.8)$ 
 
-  **Inverse_Design_From_Symbols_Random.py**: 
+  **Inverse_Design_From_Symbols_Random.py**: Inverse design of PhCs from random initialization. Our procedure for inverse of a given PhC is as follows: We start with a randomly initialized 3-component vector (with components betwen -0.25 and 0.25). This vector corresponds to the three smallest-in-magnitude Fourier components. We then minimize a target-category-dependent function g(x), which is derived from our symbolic formulas. After every ten gradient descent steps, we check to see if our formulas predict the PhC to be in the target category. If so, we stop the gradient descent. 
 
   **Two_Tone_Inverse_Design_From_Symbols_Random.py**:
 
