@@ -16,5 +16,7 @@
 
   **run_inverse_design_from_KAN.sh**: Bash script that runs inverse design through gradient descent directly on KAN network. 
 
+  **Symbolic_Formulas.ipynb**: This notebook loads the formulas corresponding to each category and displays them in latex. 
+
 ## Symbolic formulas 
   
