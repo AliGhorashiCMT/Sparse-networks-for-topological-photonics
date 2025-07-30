@@ -4,7 +4,7 @@
 
   **runarray.sh**: Main script that runs a series of job arrays, each of which computes photonic crystal band properties by calling **runlattices-array.jl**, detailed below. 
   
-  **runlattices-array.jl**: julia script that calls **runlattice.sh** and provides it with the appropriate photonic crystal parameters. 
+  **runlattices-array.jl**: julia script that calls **runlattice.sh** and provides it with the appropriate photonic crystal parameters. Specifically, we loop over 4 degrees of perturbation (labeled by *gidx*). For each *gidx*, we create 10,000 photonic crystals, 
   
   **runlattice.sh**: script that runs a 2D mpb calculation for fixed oblique lattice vectors, given by $(1, 0)$ and $(0.5, 0.8)$ 
 
