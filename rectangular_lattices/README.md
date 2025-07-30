@@ -18,5 +18,7 @@
 
   **Symbolic_Formulas.ipynb**: This notebook loads the formulas corresponding to each category and displays them in latex. 
 
+  **level-set-fourier-lattice.scm**: Defines the dielectric function in real space. Note the counterintuitive (x<->y) switch in the material function, which was implemented for consistency with previous code.  
+
 ## Symbolic formulas 
   
