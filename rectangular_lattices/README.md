@@ -2,6 +2,10 @@
 
 ## Description of scripts and notebooks
 
+  **Band structures.ipynb**: Band structure of photonic crystal used in **Figure 1** of the main text.    
+  
+  **data_augmentation.ipynb**: Data augmentation subfigures used in **Figure 2**
+
   **runarray.sh**: Main script that runs a series of job arrays, each of which computes photonic crystal band properties by calling **runlattices-array.jl**, detailed below. 
   
   **runlattices-array.jl**: julia script that calls **runlattice.sh** and provides it with the appropriate photonic crystal parameters. Specifically, we loop over 4 levels of perturbation (labeled by *gidx*). For each *gidx*, we create 10,000 photonic crystals for which the dielectric function varies from a perfectly homogeneous dielectric by a scale set by *gidx*. **runlattices-array.jl** sets the DC component of the dielectric function to a value so 20, so that the dielectric function never goes below vacuum. The other 18 components (9 independent components) are sampled randomly in a range set by *gidx*. 
