@@ -4,7 +4,9 @@
 
   **Band structures.ipynb**: Band structure of photonic crystal used in **Figure 1** of the main text.    
   
-  **data_augmentation.ipynb**: Data augmentation subfigures used in **Figure 2** of the main text. 
+  **data_augmentation.ipynb**: Data augmentation subfigures used in **Figure 2** of the main text.
+
+  **Inverse Design Band Structures.ipynb**: Band structures for **Figure 3** and **Figure 4** of the main text. 
 
   **runarray.sh**: Main script that runs a series of job arrays, each of which computes photonic crystal band properties by calling **runlattices-array.jl**, detailed below. 
   
