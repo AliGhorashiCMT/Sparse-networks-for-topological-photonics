@@ -27,4 +27,6 @@
   **level-set-fourier-lattice.scm**: Defines the dielectric function in real space. Note the counterintuitive (x<->y) switch in the material function, which was implemented for consistency with previous code.  
 
 ## Symbolic formulas 
+
+The formulas derived from the KANs (to predict the symmetry class of the lowest TM mode) may be found in seven *.pkl* files: *formula-class(class).pkl*, where *class* is a zero based index, ranging from $0$ to $7$. 
   
