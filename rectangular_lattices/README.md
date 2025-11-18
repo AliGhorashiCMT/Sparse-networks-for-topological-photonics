@@ -8,6 +8,8 @@
 
   **Inverse Design Band Structures.ipynb**: Band structures for **Figure 3** and **Figure 4** of the main text. 
 
+  **Inverse_Design_Dirac_Points.ipynb**: More in depth analysis of the Dirac point PhC of **Figure 4** (mostly sanity checks).
+  
   **Inverse design examples and success rates.ipynb**: Examples of inverse designed photonic crystals shown in the supplement. 
   
   **runarray.sh**: Main script that runs a series of job arrays, each of which computes photonic crystal band properties by calling **runlattices-array.jl**, detailed below. 
