@@ -28,7 +28,7 @@
 
   **run_inverse_design_from_KAN.sh**: Bash script that runs inverse design through gradient descent directly on KAN network. 
 
-  **level-set-fourier-lattice.scm**: Defines the dielectric function in real space. Note the counterintuitive (x<->y) switch in the material function, which was implemented for consistency with previous code.  
+  **level-set-fourier-lattice.scm**: Defines the dielectric function in real space. Note the counterintuitive ($x \leftrightarrow y$) switch in the material function, which was implemented for consistency with previous code.  
 
 ## Symbolic formulas 
 
