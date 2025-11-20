@@ -8,7 +8,9 @@
 
   **kans_for_smooth.ipynb**: KAN for classification of the lowest TM band symmetry. A KAN with width `[9, 24, 8]` is shown to have $>99\%$ train and test accuracies. This model is then pruned to create a KAN with width `[3, 4, 8]` with similar high accuracy. This notebook saves the activation functions shown in **Figure 2** of the main text as: `./figures/TM-Band1-prunedinput-prunednode-f$(idx).pdf`, where `idx=000, 001, 011, 130` and also saves the network itself as `TM-Band1-9948-9932-prunedinput-prunednode.pdf`, where the numbers indicate $99.48$ and $99.32$ train and test accuracies, respectively. 
   
-  **Inverse Design Band Structures.ipynb**: Band structures for **Figure 3** and **Figure 4** of the main text. 
+  **Inverse Design Band Structures.ipynb**: Band structures for **Figure 3** and **Figure 4** of the main text.
+
+  **inverse_design_edge_states.ipynb**: Band structures for edge state dispersion in **Figure 4** of the main text. This notebook finds the symmetry eigenvalues for the PhC chosen in the main text and also saves the relevant figures in `./figures/edge_states.pdf` and `./figures/edge_state_unit_cell.pdf`. 
 
   **Inverse_Design_Dirac_Points.ipynb**: More in depth analysis of the Dirac point PhC of **Figure 4** (mostly sanity checks).
   
