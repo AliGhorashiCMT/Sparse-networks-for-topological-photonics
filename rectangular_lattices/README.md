@@ -15,6 +15,8 @@
   **inverse_design_edge_states.ipynb**: Band structures for edge state dispersion in **Figure 4** of the main text. This notebook finds the symmetry eigenvalues for the PhC chosen in the main text and also saves the relevant figures in `./figures/edge_states.pdf` and `./figures/edge_state_unit_cell.pdf`. 
 
   **Inverse_Design_Dirac_Points.ipynb**: More in depth analysis of the Dirac point PhC of **Figure 4**. Verifies the non-trivial symmetry eigenvalues and saves the relevant figures in `./figures/dirac_point_bands.pdf`, `./figures/dirac_point_bz.pdf` and `./figures/dirac_point_ucell.pdf` 
+
+  **kans_for_smooth_tm_band2.ipynb** and **kans_for_smooth_te.ipynb**: TM band 2 and TE band 1 models, corresponding to KANs saved as `./figures/TM-Band2-9774-9602.pdf` and `./figures/TE-Band1-98-98.pdf`.
   
   **Inverse design examples and success rates.ipynb**: Examples of inverse designed photonic crystals shown in the supplement. 
   
