@@ -28,11 +28,11 @@
 
   **run_inverse_design_from_KAN.sh**: Bash script that runs inverse design through gradient descent directly on KAN network. 
 
-  **Symbolic_Formulas.ipynb**: This notebook loads the formulas corresponding to each category and displays them in latex. 
-
   **level-set-fourier-lattice.scm**: Defines the dielectric function in real space. Note the counterintuitive (x<->y) switch in the material function, which was implemented for consistency with previous code.  
 
 ## Symbolic formulas 
 
-The formulas derived from the KANs (to predict the symmetry class of the lowest TM mode) may be found in seven *.pkl* files: *formula-class(class).pkl*, where *class* is a zero based index, ranging from $0$ to $7$. 
-  
+The formulas derived from the KANs (to predict the symmetry class of the lowest TM mode) may be found in seven `.pkl` files: `formula-class(class).pkl`, where `class` is a zero based index, ranging from $0$ to $7$. 
+
+  **Symbolic_Formulas.ipynb**: For convenience, this notebook loads the formulas corresponding to each category and displays them in latex. It also calculates the accuracy of the formulas after they've been rounded. 
+
