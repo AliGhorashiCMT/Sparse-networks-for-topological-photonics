@@ -4,7 +4,7 @@
 
   **Band structures.ipynb**: Band structure of photonic crystal used in **Figure 1** of the main text. This notebook finds the Photonic crystal with the best k-wise gap. The associated dispersion of this photonic crystal is saved by this notebook in `./figures/figure1-dispersion.pdf`    
   
-  **data_augmentation.ipynb**: Data augmentation subfigures used in **Figure 1** of the main text as well as Fourier components for **Figure 2** of the main text. Shifted unit cells (corresponding to augmented data) are saved in `data_augmentation-$wp.pdf`, where `wp` can take values `1a, 1b, 1c, 1d`. 
+  **data_augmentation.ipynb**: Data augmentation subfigures used in **Figure 1** of the main text as well as Fourier components for **Figure 2** of the main text. Shifted unit cells (corresponding to augmented data) are saved in `./figures/data_augmentation-$wp.pdf`, where `wp` can take values `1a, 1b, 1c, 1d`. Fourier components used in **Figure 2** are saved in `./figures/data_augmentation-fourier$idx.pdf`, where `idx` can take values from one to three. 
 
   **Inverse Design Band Structures.ipynb**: Band structures for **Figure 3** and **Figure 4** of the main text. 
 
