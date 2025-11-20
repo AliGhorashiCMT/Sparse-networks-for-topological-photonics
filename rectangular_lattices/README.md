@@ -10,6 +10,8 @@
   
   **Inverse Design Band Structures.ipynb**: Band structure and dielectric profile for **Figure 3**. Produces figures saved as `inverse_design_dielectric_from_KAN.pdf` and `inverse_design_bands_from_KAN.pdf`. 
 
+  **Inverse design success rate.ipynb**: **Figure 3** inverse design statistics, saved as `inverse_design_accuracy_symbols_random.pdf`.
+
   **inverse_design_edge_states.ipynb**: Band structures for edge state dispersion in **Figure 4** of the main text. This notebook finds the symmetry eigenvalues for the PhC chosen in the main text and also saves the relevant figures in `./figures/edge_states.pdf` and `./figures/edge_state_unit_cell.pdf`. 
 
   **Inverse_Design_Dirac_Points.ipynb**: More in depth analysis of the Dirac point PhC of **Figure 4**. Verifies the non-trivial symmetry eigenvalues and saves the relevant figures in `./figures/dirac_point_bands.pdf`, `./figures/dirac_point_bz.pdf` and `./figures/dirac_point_ucell.pdf` 
