@@ -18,7 +18,7 @@
 
   **kans_for_smooth_tm_band2.ipynb** and **kans_for_smooth_te.ipynb**: TM band 2 and TE band 1 models, corresponding to KANs saved as `./figures/TM-Band2-9774-9602.pdf` and `./figures/TE-Band1-98-98.pdf`.
   
-  **Inverse design examples and success rates.ipynb**: Examples of inverse designed photonic crystals shown in the supplement. 
+  **Inverse design examples and success rates.ipynb**: Examples of inverse designed photonic crystals shown in the supplement and more fine grained inverse design statistics. Inverse design statistics per topological class are saved in: `./figures/Inverse_design_delineated_success_rates-class$(class).pdf` and `./figures/inverse_design_samples-class$(class).pdf` where $class\in [0, 7]$
   
   **runarray.sh**: Main script that runs a series of job arrays, each of which computes photonic crystal band properties by calling **runlattices-array.jl**, detailed below. 
   
