@@ -6,7 +6,7 @@
   
   **data_augmentation.ipynb**: Data augmentation subfigures used in **Figure 1** of the main text as well as Fourier components for **Figure 2** of the main text. Shifted unit cells (corresponding to augmented data) are saved in `./figures/data_augmentation-$wp.pdf`, where `wp` can take values `1a, 1b, 1c, 1d`. Fourier components used in **Figure 2** are saved in `./figures/data_augmentation-fourier$idx.pdf`, where `idx` can take values from one to three. 
 
-  **kans_for_smooth.ipynb**: KAN for classification of the lowest TM band symmetry. A KAN with width `[9, 24, 8]` is shown to have $>99\%$ train and test accuracies. This model is then pruned to create a KAN with width `[3, 4, 8]` with similar high accuracy. This notebook saves the activation functions shown in **Figure 2** of the main text as: `./figures/TM-Band1-prunedinput-prunednode-f$(idx).pdf`, where `idx=000, 001, 011, 130`.
+  **kans_for_smooth.ipynb**: KAN for classification of the lowest TM band symmetry. A KAN with width `[9, 24, 8]` is shown to have $>99\%$ train and test accuracies. This model is then pruned to create a KAN with width `[3, 4, 8]` with similar high accuracy. This notebook saves the activation functions shown in **Figure 2** of the main text as: `./figures/TM-Band1-prunedinput-prunednode-f$(idx).pdf`, where `idx=000, 001, 011, 130` and also saves the network itself as `TM-Band1-9948-9932-prunedinput-prunednode.pdf`, where the numbers indicate $99.48$ and $99.32$ train and test accuracies, respectively. 
   
   **Inverse Design Band Structures.ipynb**: Band structures for **Figure 3** and **Figure 4** of the main text. 
 
