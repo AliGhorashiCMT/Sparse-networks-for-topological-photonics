@@ -1,6 +1,4 @@
-## Description of dataset and analysis herein
-
-## Description of scripts and notebooks
+## Scripts and notebooks that make the figures in the main text and supplement
 
   **Band structures.ipynb**: Band structure of photonic crystal used in **Figure 1** of the main text. This notebook finds the Photonic crystal with the best k-wise gap. The associated dispersion of this photonic crystal is saved by this notebook in `./figures/figure1-dispersion.pdf`    
   
@@ -21,7 +19,9 @@
   **small_datasets.ipynb**: Accuracy of KANs trained on small datasets with and without augmentation. Data is saved in `./figures/Augmentation_accuracy_increase.pdf`. 
   
   **Inverse design examples and success rates.ipynb**: Examples of inverse designed photonic crystals shown in the supplement and more fine grained inverse design statistics. This notebook saves inverse design statistics per topological class in seven pdfs: `./figures/Inverse_design_delineated_success_rates-class$(class).pdf` and it saves examples of inverse designed PhCs in `./figures/inverse_design_samples-class$(class).pdf`, where $\text{class} \in [0, 7]$.
-  
+
+## Scripts that make the original and inverse design datasets
+
   **runarray.sh**: Main script that runs a series of job arrays, each of which computes photonic crystal band properties by calling **runlattices-array.jl**, detailed below. 
   
   **runlattices-array.jl**: julia script that calls **runlattice.sh** and provides it with the appropriate photonic crystal parameters. Specifically, we loop over 4 levels of perturbation (labeled by `gidx`). For each `gidx`, we create 10,000 photonic crystals for which the dielectric function varies from a perfectly homogeneous dielectric by a scale set by `gidx`. **runlattices-array.jl** sets the DC component of the dielectric function to a value so 20, so that the dielectric function never goes below vacuum. The other 18 components (9 independent components) are sampled randomly in a range set by `gidx`. 
@@ -38,7 +38,7 @@
 
   **level-set-fourier-lattice.scm**: Defines the dielectric function in real space. Note the counterintuitive ($x \leftrightarrow y$) switch in the material function, which was implemented for consistency with previous code.  
 
-## Symbolic formulas 
+## Symbolic formulas derived through KANs
 
 The formulas derived from the KANs (to predict the symmetry class of the lowest TM mode) may be found in seven `.pkl` files: `formula-class(class).pkl`, where `class` is a zero based index, ranging from $0$ to $7$. 
 
