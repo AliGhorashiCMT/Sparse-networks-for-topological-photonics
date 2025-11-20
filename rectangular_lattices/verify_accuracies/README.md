@@ -7,4 +7,9 @@
 
   **save_accuracies.jl**: Combines outputs from all `.o` files into one text file.
 
-  **all_accuracies.txt**: The text file with all accuracies. 
+  **all_accuracies.txt**: The text file with all accuracies. If you would like to average all the accuracies (across the entire dataset), all you need to do is: 
+```
+import numpy as np
+accuracies = np.loadtxt("all_accuracies.txt")
+print(accuracies.sum()/accuracies.shape[0])
+```
