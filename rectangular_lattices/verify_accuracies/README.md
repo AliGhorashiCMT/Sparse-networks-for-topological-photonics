@@ -13,3 +13,5 @@ import numpy as np
 accuracies = np.loadtxt("all_accuracies.txt")
 print(accuracies.sum()/accuracies.shape[0])
 ```
+
+which should output: `0.986481249704957`
