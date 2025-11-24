@@ -45,5 +45,7 @@
 The formulas derived from the KANs (to predict the symmetry class of the lowest TM mode) may be found in seven `.pkl` files: `formula-class(class).pkl`, where `class` is a zero based index, ranging from $0$ to $7$. 
 
   **Symbolic_Formulas.ipynb**: For convenience, this notebook loads the formulas corresponding to each category and displays them in latex. It also calculates the accuracy of the formulas after they've been rounded. If you would like to see the accuracy of the formulas on the entire dataset, please refer to the instructions in `./verify_accuracies/`
+
+  **Plot Symbolic Formulas.ipynb**: Plots how the formulas categorize over two slices in $(\varepsilon_{01}, \varepsilon_{10}, \varepsilon_{11})$ space. Produces the figures: `./figures/Formula_Plot_Slice_z=-0.25.pdf` and `Formula_Plot_Slice_z=0.25.pdf`. 
   
 
