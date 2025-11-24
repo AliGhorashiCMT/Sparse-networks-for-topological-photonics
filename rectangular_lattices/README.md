@@ -32,7 +32,7 @@
   
   **Inverse_Design_From_Symbols_Random.py**: Inverse design of PhCs from random initialization. Our procedure for inverse of a given PhC is as follows: We start with a randomly initialized 3-component vector (with components betwen -0.25 and 0.25). This vector corresponds to the three smallest-in-magnitude Fourier components. We then minimize a target-category-dependent function g(x), which is derived from our symbolic formulas. After every ten gradient descent steps, we check to see if our formulas predict the PhC to be in the target category. If so, we stop the gradient descent. 
 
-  **Two_Tone_Inverse_Design_From_Symbols_Random.py**: This evaluates the formulas on the fourier components of the two-tone lattices (which are mapped from the smooth lattices) in order to determine which two-tone PhCs we can expect to be in the target category. 
+  **Two_Tone_Inverse_Design_From_Symbols_Random.py**: This evaluates the formulas on the fourier components of the two-tone lattices (which are mapped from the smooth lattices) in order to determine which two-tone PhCs we can expect to be in the target category. This python file creates eight hdf5 files with the inverse designed Fourier coefficients. These files are stored in: `./inverse_design_smooth_symbols_random/inverse_design_params-class{class}.h5`
 
   **run_inverse_design_from_symbols.sh**: Bash script that runs inverse design through gradient descent of the formulas we obtain from symbolic regression (by calling relevant python file(s)). 
 
