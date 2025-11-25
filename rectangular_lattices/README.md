@@ -1,4 +1,9 @@
-## Scripts and notebooks that make the figures in the main text and supplement
+### Quick synopsis of data
+
+If you only require access to the data required to reproduce our photonic crystals: `sg2-data.h5` contains all Fourier coefficients, which uniquely specify each lattice. For the inverse designed photonic crystals, you may find the first three Fourier coefficients (the salient ones) in `./inverse_design_smooth_symbols_random/inverse_design_params-class$(class).h5` and the 6 other Fourier coefficients (randomized for PhC diversity) in `./inverse_design_smooth_symbols/inverse_design_params-random-class$(class).h5`. 
+
+
+### Scripts and notebooks that make the figures in the main text and supplement
 
   **Band structures.ipynb**: Band structure of photonic crystal used in **Figure 1** of the main text. This notebook finds the Photonic crystal with the best k-wise gap. The associated dispersion of this photonic crystal is loaded from the log file in `./dispersion/logs/` and is subsequently plotted and saved by this notebook in `./figures/figure1-dispersion.pdf`. Symmetry data and k-wise gaps are read from `./sg2-data.h5`, which stores all data for TM modes in our original dataset.  
   
@@ -20,7 +25,7 @@
   
   **Inverse design examples and success rates.ipynb**: Examples of inverse designed photonic crystals shown in the supplement and more fine grained inverse design statistics. This notebook saves inverse design statistics per topological class in seven pdfs: `./figures/Inverse_design_delineated_success_rates-class$(class).pdf` and it saves examples of inverse designed PhCs in `./figures/inverse_design_samples-class$(class).pdf`, where $\text{class} \in [0, 7]$.
 
-## Scripts that make the original and inverse design datasets
+### Scripts that make the original and inverse design datasets
 
   **runarray.sh**: Main script that runs a series of job arrays, each of which computes photonic crystal band properties by calling **runlattices-array.jl**, detailed below. 
   
@@ -40,7 +45,7 @@
 
   **level-set-fourier-lattice.scm**: Defines the dielectric function in real space. Note the counterintuitive ($x \leftrightarrow y$) switch in the material function, which was implemented for consistency with previous code.  
 
-## Symbolic formulas derived through KANs
+### Symbolic formulas derived through KANs
 
 The formulas derived from the KANs (to predict the symmetry class of the lowest TM mode) may be found in seven `.pkl` files: `formula-class(class).pkl`, where `class` is a zero based index, ranging from $0$ to $7$. 
 
