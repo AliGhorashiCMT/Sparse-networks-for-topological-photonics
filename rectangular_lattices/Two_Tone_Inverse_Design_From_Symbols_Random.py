@@ -25,12 +25,12 @@ all_data = np.zeros((N, 9))
 
 filename = f"inverse_design_params-class{topological_class}.h5"
 file = h5py.File(inverse_design_dir + filename, 'r')
-all_data[0:250, 0:3] = file["inverse_design_params"][()]
+all_data[0:250, 0:3] = file["inverse_design_params"][()] # The first three Fourier coefficients that matter
 file.close()
 
 filename = f"inverse_design_params-random-class{topological_class}.h5"
 file = h5py.File(inverse_design_dir_1 + filename, 'r')
-all_data[0:250, 3:9] = file["inverse_design_params_random"][()]
+all_data[0:250, 3:9] = file["inverse_design_params_random"][()] # The additional fourier coefficients that "don't matter"
 file.close()
 
 all_formulas = []
@@ -54,24 +54,24 @@ M = 64
 xs = ys = np.linspace(-0.5, 0.5, M, endpoint=false)
 xs = np.repeat(np.reshape(xs, (1, M)), M, axis=0);
 ys = np.repeat(np.reshape(ys, (M, 1)), M, axis=1);
-Gs = [[-1, 0], [0, -1], [-1, -1], [-1, 1], [-2, 0], [0, -2], [-2, -1], [-2, 1], [-1, -2]]
+Gs = [[-1, 0], [0, -1], [-1, -1], [-1, 1], [-2, 0], [0, -2], [-2, -1], [-2, 1], [-1, -2]] # Only include one reciprocal vector in each orbit
 
 def smooth(X, M=64):
     epsilon_grid = np.zeros((M, M))
     for (CG, (Gx, Gy)) in zip(X, Gs):
-        epsilon_grid += CG*np.cos(2*np.pi*xs* Gy + 2*np.pi*ys * Gx)
+        epsilon_grid += CG*np.cos(2*np.pi*xs*Gy + 2*np.pi*ys*Gx) # Note flip of Gx and Gy 
     return epsilon_grid
 
 for n in range(0, N):
     print(f"n: {n}", flush=true)
     epsilon_grid = smooth(all_data[n,  :])
-    perc25, perc50, perc75 = np.percentile(epsilon_grid, [25, 50, 75])
-    epsilon_grid_two_tone = np.where(epsilon_grid < perc50, perc25, perc75)
+    perc25, perc50, perc75 = np.percentile(epsilon_grid, [25, 50, 75]) # Find the threshold and quantiless
+    epsilon_grid_two_tone = np.where(epsilon_grid < perc50, perc25, perc75) # Two-tone permittivity
     Cgs_two_tone = np.zeros(9)
     for (m, G) in enumerate(Gs): 
         Gx, Gy = G
-        G_grid = np.cos(2*np.pi*xs* Gy + 2*np.pi*ys * Gx)
-        Cgs_two_tone[m] = ((G_grid * epsilon_grid_two_tone)*2/M/M).sum()
+        G_grid = np.cos(2*np.pi*xs*Gy + 2*np.pi*ys*Gx)
+        Cgs_two_tone[m] = ((G_grid * epsilon_grid_two_tone)*2/M/M).sum() # Multiply by 2 since integral of cos^2 is 1/2
     x = Cgs_two_tone[0:3]
     f0_r = f0(x[0], x[1], x[2])
     f1_r = f1(x[0], x[1], x[2])
